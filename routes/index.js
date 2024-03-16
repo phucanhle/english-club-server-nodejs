@@ -5,6 +5,7 @@ const userRouter = require("./userRouter");
 const notifyRouter = require("./notifiRouter");
 const assignmentRouter = require("./assignmentRouter");
 
+mainRouter.use("/", (req, res) => res.send({ msg: "Sever is working" }));
 mainRouter.use("/users", userRouter);
 mainRouter.use("/courses", coursesRouter);
 mainRouter.use("/topics", topicRouter);
